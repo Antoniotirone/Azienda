@@ -1,110 +1,48 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZIENDA AGRICOLA TIRONE</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .product {
-            display: inline-block;
-            background: white;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 250px;
-        }
-        .product img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact {
-            margin-top: 40px;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            width: 300px;
-        }
-        input, textarea {
-            width: 100%;
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #007bff;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <h1>AZIENDA AGRICOLA TIRONE</h1>
-    <div class="container">
-        <div class="product">
-            <img src="https://via.placeholder.com/250" alt="Prodotto 1">
-            <h2>Prodotto 1</h2>
-            <p>Descrizione breve del prodotto.</p>
-            <button class="button" onclick="showAlert('Prodotto 1')">Scopri di più</button>
-        </div>
-        <div class="product">
-            <img src="https://via.placeholder.com/250" alt="Prodotto 2">
-            <h2>Prodotto 2</h2>
-            <p>Descrizione breve del prodotto.</p>
-            <button class="button" onclick="showAlert('Prodotto 2')">Scopri di più</button>
-        </div>
-        <div class="product">
-            <img src="https://via.placeholder.com/250" alt="Prodotto 3">
-            <h2>Prodotto 3</h2>
-            <p>Descrizione breve del prodotto.</p>
-            <button class="button" onclick="showAlert('Prodotto 3')">Scopri di più</button>
-        </div>
-    </div>
-    
-    <div class="contact">
-        <h2>Contattaci</h2>
-        <form>
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Messaggio" rows="4" required></textarea>
-            <button class="button" type="submit">Invia</button>
-        </form>
-    </div>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
 
-    <footer>
-        <p>&copy; 2025 Tua Azienda. Tutti i diritti riservati.</p>
-    </footer>
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2a7a2a;
+    padding: 15px;
+    text-align: center;
+}
 
-    <script>
-        function showAlert(productName) {
-            alert("Hai selezionato " + productName);
-        }
-    </script>
-</body>
-</html>
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.header {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.header h1 {
+    color: blue;
+    font-size: 36px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background: #2a7a2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
