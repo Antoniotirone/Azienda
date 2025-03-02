@@ -10,7 +10,16 @@
         .navbar a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; }
         .hero { position: relative; width: 100%; height: 100vh; background: url('1.1sfondo.jpg.webp') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; text-align: center; color: white; }
         .hero h1 { font-size: 50px; background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 10px; }
-        .footer { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 40px 20px; }
+        .description { text-align: center; padding: 50px; background: white; }
+        .description h2 { color: black; margin-bottom: 10px; }
+        .description p { max-width: 800px; margin: auto; color: black; }
+        .footer { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 40px 20px; display: flex; justify-content: space-around; border-top: 2px solid white; border-bottom: 2px solid white; }
+        .footer div { flex: 1; padding: 10px; }
+        .footer div:not(:last-child) { border-right: 2px solid white; }
+        .footer p { margin: 5px 0; }
+        .footer .social-icons img, .footer-logo img { width: 20px; vertical-align: middle; margin-right: 5px; }
+        .footer-logo img { width: 150px; display: block; margin: 0 auto 10px; }
+        .footer-bottom { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 10px; }
     </style>
 </head>
 <body>
@@ -24,6 +33,13 @@
 
     <section class="hero">
         <h1>Chi Siamo</h1>
+    </section>
+
+    <section class="description">
+        <h2>La nostra storia</h2>
+        <p>L'azienda agricola Tirone nasce dalla passione per la terra e dalla volontà di offrire prodotti genuini e di alta qualità.  
+           Fondata con l'obiettivo di promuovere la coltivazione biologica, oggi l'azienda è un punto di riferimento per la produzione di olio e mandorle.</p>
+        <p>Ci troviamo a Grotte (AG), a circa 20 km dalla Valle dei Templi, immersi in un territorio ricco di storia e tradizione agricola.</p>
     </section>
 
     <footer class="footer">
@@ -48,7 +64,7 @@
             <p><img src="telegram.png" alt="Telegram"> Telegram</p>
         </div>
     </footer>
-    
+
     <div class="footer-bottom">
         <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
     </div>
