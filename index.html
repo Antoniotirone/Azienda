@@ -29,7 +29,7 @@
             position: relative;
             width: 100%;
             height: 100vh;
-            background: url('1sfondo.jpg.webp') no-repeat center center/cover;
+            background: url('immagine-home.jpg.webp') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -61,10 +61,32 @@
             background: rgba(0, 0, 0, 0.6);
             color: white;
             text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+        }
+        .footer div {
+            flex: 1;
+            padding: 10px;
+        }
+        .footer div:not(:last-child) {
+            border-right: 2px solid white;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer .social-icons img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
@@ -89,9 +111,28 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
-        <p>Contatti: info@aziendaagricolatirone.it | Tel: +39 123 456 7890</p>
+        <div>
+            <p><strong>Azienda Agricola Tirone</strong></p>
+            <p>Contrada Quattro Finaite</p>
+            <p>Grotte AG, 92020</p>
+        </div>
+        <div>
+            <p><strong>Contatti</strong></p>
+            <p>Email: antoniotirone@hotmail.it</p>
+            <p>Tel: 3501433500</p>
+        </div>
+        <div class="social-icons">
+            <p><strong>Seguici su</strong></p>
+            <p><img src="instagram.png" alt="Instagram"> Instagram</p>
+            <p><img src="facebook.png" alt="Facebook"> Facebook</p>
+            <p><img src="tiktok.png" alt="TikTok"> TikTok</p>
+            <p><img src="telegram.png" alt="Telegram"> Telegram</p>
+        </div>
     </footer>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
+    </div>
 
 </body>
 </html>
