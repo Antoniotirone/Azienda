@@ -5,45 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prodotti - Azienda Agricola Tirone</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            text-align: center;
-            z-index: 1000;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 40px;
-            text-align: center;
-            background: white;
-        }
-        .product {
-            display: inline-block;
-            background: white;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 10px;
-            width: 250px;
-        }
-        .product img {
-            width: 100%;
-            border-radius: 10px;
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .navbar { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.6); padding: 15px; text-align: center; z-index: 1000; }
+        .navbar a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; }
+        .hero { position: relative; width: 100%; height: 100vh; background: url('1.1sfondo.jpg.webp') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; text-align: center; color: white; }
+        .hero h1 { font-size: 50px; background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 10px; }
     </style>
 </head>
 <body>
@@ -55,24 +21,13 @@
         <a href="contatti.html">Contatti</a>
     </nav>
 
-    <section class="container">
-        <h2>I nostri prodotti</h2>
-        <div class="product">
-            <img src="olio.jpg.webp" alt="Olio d'oliva">
-            <h3>Olio d'oliva Biologico</h3>
-            <p>Extravergine di qualità superiore.</p>
-        </div>
-        <div class="product">
-            <img src="mandorle.jpg.webp" alt="Mandorle">
-            <h3>Mandorle Biologiche</h3>
-            <p>Buone e croccanti.</p>
-        </div>
-        <div class="product">
-            <img src="vino.jpg.webp" alt="Vino">
-            <h3>Vino</h3>
-            <p>Preparato con uva selezionata.</p>
-        </div>
+    <section class="hero">
+        <h1>Prodotti</h1>
     </section>
+
+    <footer class="footer">
+        <!-- FOOTER IDENTICO ALLA HOME -->
+    </footer>
 
 </body>
 </html>
