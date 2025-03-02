@@ -10,6 +10,16 @@
         .navbar a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; }
         .hero { position: relative; width: 100%; height: 100vh; background: url('1.1sfondo.jpg.webp') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; text-align: center; color: white; }
         .hero h1 { font-size: 50px; background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 10px; }
+        .container { max-width: 1200px; margin: auto; padding: 40px; text-align: center; background: white; }
+        .product { display: inline-block; background: white; margin: 15px; padding: 15px; border-radius: 10px; width: 250px; }
+        .product img { width: 100%; border-radius: 10px; }
+        .footer { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 40px 20px; display: flex; justify-content: space-around; border-top: 2px solid white; border-bottom: 2px solid white; }
+        .footer div { flex: 1; padding: 10px; }
+        .footer div:not(:last-child) { border-right: 2px solid white; }
+        .footer p { margin: 5px 0; }
+        .footer .social-icons img, .footer-logo img { width: 20px; vertical-align: middle; margin-right: 5px; }
+        .footer-logo img { width: 150px; display: block; margin: 0 auto 10px; }
+        .footer-bottom { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 10px; }
     </style>
 </head>
 <body>
@@ -25,9 +35,51 @@
         <h1>Prodotti</h1>
     </section>
 
+    <section class="container">
+        <h2>I nostri prodotti</h2>
+        <div class="product">
+            <img src="olio.jpg.webp" alt="Olio d'oliva">
+            <h3>Olio d'oliva Biologico</h3>
+            <p>Extravergine di qualità superiore.</p>
+        </div>
+        <div class="product">
+            <img src="mandorle.jpg.webp" alt="Mandorle">
+            <h3>Mandorle Biologiche</h3>
+            <p>Buone e croccanti.</p>
+        </div>
+        <div class="product">
+            <img src="vino.jpg.webp" alt="Vino">
+            <h3>Vino</h3>
+            <p>Preparato con uva selezionata.</p>
+        </div>
+    </section>
+
     <footer class="footer">
-        <!-- FOOTER IDENTICO ALLA HOME -->
+        <div>
+            <div class="footer-logo">
+                <img src="Logotrasp1.png" alt="Azienda Agricola Tirone Logo">
+            </div>
+            <p><strong>Azienda Agricola Tirone</strong></p>
+            <p>Contrada Quattro Finaite</p>
+            <p>Grotte AG, 92020</p>
+        </div>
+        <div>
+            <p><strong>Contatti</strong></p>
+            <p>Email: antoniotirone@hotmail.it</p>
+            <p>Tel: +39 3501433500</p>
+        </div>
+        <div class="social-icons">
+            <p><strong>Seguici su</strong></p>
+            <p><img src="logoinsta.png" alt="Instagram"> Instagram</p>
+            <p><img src="logofb.png" alt="Facebook"> Facebook</p>
+            <p><img src="logotiktok.png" alt="TikTok"> TikTok</p>
+            <p><img src="telegram.png" alt="Telegram"> Telegram</p>
+        </div>
     </footer>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
+    </div>
 
 </body>
 </html>
