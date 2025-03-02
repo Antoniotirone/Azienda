@@ -3,26 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Azienda Agricola</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Azienda Agricola Tirone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Sfondo semi-trasparente */
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('immagine-home.jpg.webp') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .description {
+            text-align: center;
+            padding: 50px;
+            background: white;
+        }
+        .description h2 {
+            color: black;
+            margin-bottom: 10px;
+        }
+        .description p {
+            max-width: 800px;
+            margin: auto;
+            color: black;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="navbar">
+    <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="prodotti.html">Prodotti</a>
         <a href="chi-siamo.html">Chi Siamo</a>
         <a href="contatti.html">Contatti</a>
-    </div>
+    </nav>
 
-    <div class="header">
+    <section class="hero">
         <h1>Azienda Agricola Tirone</h1>
-        <p>Qualità e tradizione dalla nostra terra</p>
-    </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Azienda Agricola Tirone - Tutti i diritti riservati.</p>
-    </footer>
+    <section class="description">
+        <h2>Welcome</h2>
+        <h2>La nostra azienda</h2>
+        <p>L'azienda agricola Tirone ha sede a Grotte (Ag), a circa 20 Km dalla Valle dei Templi. 
+           L'azienda, condotta con i sistemi dell'agricoltura biologica, produce principalmente mandorle ed olio.</p>
+    </section>
 
 </body>
 </html>
