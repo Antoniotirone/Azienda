@@ -22,32 +22,6 @@
         .product-links a { text-decoration: none; color: black; font-weight: bold; cursor: pointer; transition: color 0.3s; }
         .product-links a:hover, .product-links a.active { color: green; }
     </style>
-    <script>
-        function showProducts(category) {
-            let allProducts = document.querySelectorAll('.product');
-            allProducts.forEach(product => product.style.display = 'none');
-            document.querySelectorAll('.product-links a').forEach(link => link.classList.remove('active'));
-            
-            if (category === 'all') {
-                allProducts.forEach(product => product.style.display = 'inline-block');
-                document.querySelector('.product-links a[onclick*="all"]').classList.add('active');
-            } else {
-                document.querySelectorAll('.' + category).forEach(product => product.style.display = 'inline-block');
-                document.querySelector(`.product-links a[onclick*='${category}']`).classList.add('active');
-            }
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            let allProductsLink = document.querySelector('.product-links a[onclick*="all"]');
-            allProductsLink.classList.add('active');
-
-            document.querySelectorAll('.product-links a').forEach(link => {
-                link.addEventListener('click', function() {
-                    document.querySelectorAll('.product-links a').forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -83,7 +57,6 @@
             <strong>25€</strong>
         </div>
     </section>
-    
     <footer class="footer">
         <div>
             <div class="footer-logo">
@@ -106,10 +79,8 @@
             <p><img src="telegram.png" alt="Telegram"> Telegram</p>
         </div>
     </footer>
-
     <div class="footer-bottom">
         <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
     </div>
-
 </body>
 </html>
