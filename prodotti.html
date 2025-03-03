@@ -29,6 +29,21 @@
         .footer-logo img { width: 150px; display: block; margin: 0 auto 10px; }
         .footer-bottom { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 10px; }
     </style>
+    <script>
+        function showProducts(category) {
+            let allProducts = document.querySelectorAll('.product');
+            allProducts.forEach(product => product.style.display = 'none');
+            document.querySelectorAll('.product-links a').forEach(link => link.classList.remove('active'));
+            
+            if (category === 'all') {
+                allProducts.forEach(product => product.style.display = 'inline-block');
+                document.querySelector('.product-links a[onclick*="all"]').classList.add('active');
+            } else {
+                document.querySelectorAll('.' + category).forEach(product => product.style.display = 'inline-block');
+                document.querySelector(`.product-links a[onclick*='${category}']`).classList.add('active');
+            }
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar">
