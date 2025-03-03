@@ -21,6 +21,7 @@
         .product-links { text-transform: uppercase; display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
         .product-links a { text-decoration: none; color: black; font-weight: bold; cursor: pointer; transition: color 0.3s; }
         .product-links a:hover, .product-links a.active { color: green; }
+        .product-links a[data-default="true"] { color: green; }
         .footer { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 40px 20px; display: flex; justify-content: space-around; border-top: 2px solid white; border-bottom: 2px solid white; }
         .footer div { flex: 1; padding: 10px; }
         .footer div:not(:last-child) { border-right: 2px solid white; }
@@ -41,8 +42,12 @@
             } else {
                 document.querySelectorAll('.' + category).forEach(product => product.style.display = 'inline-block');
                 document.querySelector(`.product-links a[onclick*='${category}']`).classList.add('active');
+                document.querySelector('.product-links a[onclick*="all"]').classList.remove('active');
             }
         }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('.product-links a[onclick*="all"]').classList.add('active');
+        });
     </script>
 </head>
 <body>
@@ -57,7 +62,7 @@
     </section>
     <section class="container">
         <div class="product-links">
-            <a onclick="showProducts('all')">Tutti i prodotti</a>
+            <a onclick="showProducts('all')" data-default="true">Tutti i prodotti</a>
             <a onclick="showProducts('mandorle')">Mandorle</a>
             <a onclick="showProducts('olio')">Olio</a>
             <a onclick="showProducts('vino')">Vino</a>
