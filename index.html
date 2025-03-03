@@ -24,6 +24,11 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
+            transition: transform 0.2s ease-in-out;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            transform: scale(1.1);
         }
         .hero {
             position: relative;
@@ -41,21 +46,34 @@
             background: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
-            margin-top: -20px; /* Sollevato leggermente rispetto all'originale */
+            margin-top: -20px;
         }
         .description {
             text-align: center;
             padding: 30px;
-            margin-top: -30px; /* Sollevata leggermente la descrizione */
+            margin-top: -30px;
             background: white;
         }
         .description h2 {
             color: black;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
-        .description p {
-            max-width: 800px;
+        .description-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
             margin: auto;
+            text-align: left;
+        }
+        .description-content img {
+            width: 40%;
+            border-radius: 10px;
+        }
+        .description-content p {
+            width: 55%;
+            font-size: 18px;
             color: black;
         }
         .footer {
@@ -112,8 +130,11 @@
     <section class="description">
         <h2>Welcome</h2>
         <h2>La nostra azienda</h2>
-        <p>L'azienda agricola Tirone ha sede a Grotte (AG), a circa 20 Km dalla Valle dei Templi.  
-           L'azienda, condotta con i sistemi dell'agricoltura biologica, produce principalmente mandorle ed olio.</p>
+        <div class="description-content">
+            <img src="1.2" alt="Immagine della nostra azienda">
+            <p>L'azienda agricola Tirone ha sede a Grotte (AG), a circa 20 Km dalla Valle dei Templi.  
+               L'azienda, condotta con i sistemi dell'agricoltura biologica, produce principalmente mandorle ed olio.</p>
+        </div>
     </section>
 
     <footer class="footer">
