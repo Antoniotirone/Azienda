@@ -82,6 +82,12 @@
             <p>Vino rosso Azienda Agricola Tirone 1l</p>
             <strong>25€</strong>
         </div>
+        <!-- Nuovi prodotti -->
+        " + "".join(f'<div class="product mandorle">
+            <img src="mandorla{i}.jpg" alt="Mandorla{i}">
+            <p>Mandorla{i}</p>
+            <strong>{i}€</strong>
+        </div>' for i in range(1, 13)) + "
     </section>
 </body>
 </html>
