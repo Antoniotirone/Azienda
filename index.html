@@ -76,6 +76,25 @@
             font-size: 18px;
             color: black;
         }
+        .production-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: left;
+            flex-direction: row-reverse;
+        }
+        .production-content img {
+            width: 40%;
+            border-radius: 10px;
+        }
+        .production-content p {
+            width: 55%;
+            font-size: 18px;
+            color: black;
+        }
         .footer {
             background: rgba(0, 0, 0, 0.6);
             color: white;
@@ -101,11 +120,11 @@
             margin-right: 5px;
         }
         .footer-logo img {
-            width: 210px; /* Ingrandito di altri 2 cm rispetto ai 190px precedenti */
+            width: 210px;
             display: block;
             margin: 0 auto 10px;
             position: relative;
-            left: 5px; /* Spostato di mezzo centimetro a destra */
+            left: 5px;
         }
         .footer-bottom {
             background: rgba(0, 0, 0, 0.6);
@@ -138,6 +157,10 @@
                L'azienda, condotta con i sistemi dell'agricoltura biologica, produce principalmente mandorle ed olio.</p>
         </div>
         <h2>La nostra produzione BIO</h2>
+        <div class="production-content">
+            <img src="1.2.2.webp" alt="Produzione biologica">
+            <p>La nostra produzione biologica è fatta a mano.</p>
+        </div>
     </section>
 
     <footer class="footer">
