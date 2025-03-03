@@ -88,8 +88,11 @@
             flex: 1;
             padding: 10px;
         }
-        .footer div:not(:first-child):not(:last-child) {
+        .footer div:not(:last-child) {
             border-right: 2px solid white;
+        }
+        .footer div:first-child {
+            border-right: none;
         }
         .footer p {
             margin: 5px 0;
@@ -100,7 +103,7 @@
             margin-right: 5px;
         }
         .footer-logo img {
-            width: 190px; /* Aumentato di circa 4 cm rispetto ai 150px originali */
+            width: 190px;
             display: block;
             margin: 0 auto 10px;
         }
