@@ -168,6 +168,77 @@
         </div>
     </section>
 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azienda Agricola Tirone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .footer div {
+            flex: 1;
+            padding: 10px;
+        }
+        .footer div:nth-child(2) {
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer .social-icons img, .footer-logo img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .footer-logo img {
+            width: 210px;
+            display: block;
+            margin: 0 auto 10px;
+            position: relative;
+            left: 5px;
+        }
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-top: none;
+        }
+        .footer-spacing {
+            margin-top: 10px;
+        }
+        .footer-spacing p {
+            margin-bottom: 8px; /* Aumenta l'interspazio tra gli elementi */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="prodotti.html">Prodotti</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Azienda Agricola Tirone</h1>
+    </section>
+
     <footer class="footer">
         <div>
             <div class="footer-logo">
@@ -179,15 +250,19 @@
         </div>
         <div>
             <p><strong>Contatti</strong></p>
-            <p>Email: antoniotirone@hotmail.it</p>
-            <p>Tel: +39 3501433500</p>
+            <div class="footer-spacing">
+                <p>Email: antoniotirone@hotmail.it</p>
+                <p>Tel: +39 3501433500</p>
+            </div>
         </div>
         <div class="social-icons">
             <p><strong>Seguici su</strong></p>
-            <p><img src="0.1logoinsta.png" alt="Instagram"> Instagram</p>
-            <p><img src="0.2logofb.png" alt="Facebook"> Facebook</p>
-            <p><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</p>
-            <p><img src="0.4logotelegram.png" alt="Telegram"> Telegram</p>
+            <div class="footer-spacing">
+                <p><img src="0.1logoinsta.png" alt="Instagram"> Instagram</p>
+                <p><img src="0.2logofb.png" alt="Facebook"> Facebook</p>
+                <p><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</p>
+                <p><img src="0.4logotelegram.png" alt="Telegram"> Telegram</p>
+            </div>
         </div>
     </footer>
     
