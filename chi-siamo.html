@@ -13,13 +13,15 @@
         .description { text-align: center; padding: 50px; background: white; }
         .description h2 { color: black; margin-bottom: 10px; }
         .description p { max-width: 800px; margin: auto; color: black; }
-        .footer { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 40px 20px; display: flex; justify-content: space-around; border-top: 2px solid white; border-bottom: 2px solid white; }
+        .footer { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 40px 20px; display: flex; justify-content: space-around; }
         .footer div { flex: 1; padding: 10px; }
-        .footer div:not(:last-child) { border-right: 2px solid white; }
+        .footer div:nth-child(2) { border-left: 2px solid white; border-right: 2px solid white; }
         .footer p { margin: 5px 0; }
         .footer .social-icons img, .footer-logo img { width: 20px; vertical-align: middle; margin-right: 5px; }
-        .footer-logo img { width: 150px; display: block; margin: 0 auto 10px; }
-        .footer-bottom { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 10px; }
+        .footer-logo img { width: 210px; display: block; margin: 0 auto 10px; position: relative; left: 5px; }
+        .footer-bottom { background: rgba(0, 0, 0, 0.6); color: white; text-align: center; padding: 10px; border-top: none; }
+        .footer a { color: white; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -58,13 +60,13 @@
         </div>
         <div class="social-icons">
             <p><strong>Seguici su</strong></p>
-            <p><img src="logoinsta.png" alt="Instagram"> Instagram</p>
-            <p><img src="logofb.png" alt="Facebook"> Facebook</p>
-            <p><img src="logotiktok.png" alt="TikTok"> TikTok</p>
-            <p><img src="telegram.png" alt="Telegram"> Telegram</p>
+            <p><a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank"><img src="0.1logoinsta.png" alt="Instagram"> Instagram</a></p>
+            <p><a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"><img src="0.2logofb.png" alt="Facebook"> Facebook</a></p>
+            <p><a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</a></p>
+            <p><a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"><img src="0.4logotelegram.png" alt="Telegram"> Telegram</a></p>
         </div>
     </footer>
-
+    
     <div class="footer-bottom">
         <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
     </div>
