@@ -22,34 +22,6 @@
         .product-links a { text-decoration: none; color: black; font-weight: bold; cursor: pointer; transition: color 0.3s; }
         .product-links a:hover, .product-links a.active { color: green; }
     </style>
-    <script>
-        function showProducts(category) {
-            let allProducts = document.querySelectorAll('.product');
-            allProducts.forEach(product => product.style.display = 'none');
-            document.querySelectorAll('.product-links a').forEach(link => link.classList.remove('active'));
-            
-            if (category === 'all') {
-                allProducts.forEach(product => product.style.display = 'inline-block');
-                document.querySelector('.product-links a[onclick*="all"]').classList.add('active');
-            } else {
-                document.querySelectorAll('.' + category).forEach(product => product.style.display = 'inline-block');
-                document.querySelector(`.product-links a[onclick*='${category}']`).classList.add('active');
-            }
-        }
-        function openProductPage() {
-            window.location.href = 'prodotto1.html';
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            let allProductsLink = document.querySelector('.product-links a[onclick*="all"]');
-            allProductsLink.classList.add('active');
-            document.querySelectorAll('.product-links a').forEach(link => {
-                link.addEventListener('click', function() {
-                    document.querySelectorAll('.product-links a').forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -127,9 +99,7 @@
     </section>
     <footer class="footer">
         <div>
-            <div class="footer-logo">
-                <img src="Logotrasp1.png" alt="Azienda Agricola Tirone Logo">
-            </div>
+            <div class="footer-logo"><img src="Logotrasp1.png" alt="Azienda Agricola Tirone Logo"></div>
             <p><strong>Azienda Agricola Tirone</strong></p>
             <p>Contrada Quattro Finaite</p>
             <p>Grotte AG, 92020</p>
@@ -141,14 +111,10 @@
         </div>
         <div class="social-icons">
             <p><strong>Seguici su</strong></p>
-            <p><a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank"><img src="0.1logoinsta.png" alt="Instagram"> Instagram</a></p>
+            <p><a href="https://www.instagram.com/azienda_agricola_tirone" target="_blank"><img src="0.1logoinsta.png" alt="Instagram"> Instagram</a></p>
             <p><a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"><img src="0.2logofb.png" alt="Facebook"> Facebook</a></p>
-            <p><a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</a></p>
-            <p><a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"><img src="0.4logotelegram.png" alt="Telegram"> Telegram</a></p>
         </div>
     </footer>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
-    </div>
+    <div class="footer-bottom"><p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p></div>
 </body>
 </html>
