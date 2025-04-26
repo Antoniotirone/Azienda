@@ -56,7 +56,14 @@
         }
         .description h2 {
             color: black;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+        .divider {
+            width: 60px;
+            height: 4px;
+            background-color: #8B0000;
+            margin: 10px auto 30px auto;
+            border-radius: 2px;
         }
         .description-content {
             display: flex;
@@ -66,6 +73,7 @@
             max-width: 1000px;
             margin: auto;
             text-align: left;
+            flex-direction: row-reverse; /* Inverti l'ordine */
         }
         .description-content img {
             width: 40%;
@@ -156,6 +164,7 @@
 
     <section class="description">
         <h2>Welcome</h2>
+        <div class="divider"></div> <!-- Linea rossa scura -->
         <h2>La nostra azienda</h2>
         <div class="description-content">
             <img src="1.2.webp" alt="Immagine della nostra azienda">
