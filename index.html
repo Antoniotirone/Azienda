@@ -17,21 +17,26 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             z-index: 1000;
+            background: transparent;
+            transition: background 0.3s ease;
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            margin: 0 20px;
+            font-size: 22px;
+            text-transform: uppercase;
             transition: transform 0.2s ease-in-out;
             display: inline-block;
         }
         .navbar a:hover {
             transform: scale(1.1);
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.6);
         }
         .hero {
             position: relative;
@@ -185,10 +190,7 @@
         <div class="text-content">
             <h3>La nostra azienda</h3>
             <div class="divider-left"></div>
-            <p>L’azienda agricola Tirone, situata a Grotte (AG) a circa 20 km dalla Valle dei Templi, vanta una produzione totalmente biologica e tradizionale dei propri uliveti e mandorleti.L’azienda sorge a 650 metri sul livello del mare, dove particolari condizioni di terreno e microclima consentono un ambiente di coltivazione salubre e soleggiato che  favorisce la produzione di Olio extra vergine.
-Altro fiore all’occhiello dell’azienda è la produzione di mandorle, un integratore alimentare naturale!
-A queste due principali produzioni si affiancano piccole produzioni di pistacchio e noci. 
-La nostra azienda offre prodotti con gusti che riportano alle tradizioni e  alla genuinità della nostra terra, la Sicilia.</p>
+            <p>L’azienda agricola Tirone, situata a Grotte (AG) a circa 20 km dalla Valle dei Templi, vanta una produzione totalmente biologica e tradizionale dei propri uliveti e mandorleti.L’azienda sorge a 650 metri sul livello del mare, dove particolari condizioni di terreno e microclima consentono un ambiente di coltivazione salubre e soleggiato che favorisce la produzione di Olio extra vergine. Altro fiore all’occhiello dell’azienda è la produzione di mandorle, un integratore alimentare naturale! A queste due principali produzioni si affiancano piccole produzioni di pistacchio e noci. La nostra azienda offre prodotti con gusti che riportano alle tradizioni e alla genuinità della nostra terra, la Sicilia.</p>
         </div>
         <img src="1.2.webp" alt="Immagine della nostra azienda">
     </div>
@@ -238,6 +240,17 @@ La nostra azienda offre prodotti con gusti che riportano alle tradizioni e  alla
 <div class="footer-bottom">
     <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
 </div>
+
+<script>
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+</script>
 
 </body>
 </html>
