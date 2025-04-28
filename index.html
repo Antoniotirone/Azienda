@@ -17,26 +17,28 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 10px;
-            text-align: center;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             z-index: 1000;
             background: transparent;
             transition: background 0.3s ease, color 0.3s ease;
         }
         .navbar img {
             height: 40px;
-            vertical-align: middle;
-            margin-right: 20px;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 20px;
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
             font-size: 18px;
             text-transform: uppercase;
             font-family: 'Libre Baskerville', serif;
             transition: transform 0.2s ease-in-out, color 0.3s ease;
-            display: inline-block;
         }
         .navbar a:hover {
             transform: scale(1.1);
@@ -182,10 +184,12 @@
 
 <nav class="navbar">
     <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
-    <a href="index.html">Home</a>
-    <a href="prodotti.html">Prodotti</a>
-    <a href="chi-siamo.html">Chi Siamo</a>
-    <a href="contatti.html">Contatti</a>
+    <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="prodotti.html">Prodotti</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+        <a href="contatti.html">Contatti</a>
+    </div>
 </nav>
 
 <section class="hero">
