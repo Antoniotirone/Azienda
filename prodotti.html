@@ -6,11 +6,56 @@
 <title>Prodotti - Azienda Agricola Tirone</title>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* Stili CSS */
-(body and navbar styles già presenti)
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            background: transparent;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .navbar img {
+            height: 40px;
+        }
+        .navbar-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-family: 'Libre Baskerville', serif;
+            transition: transform 0.2s ease-in-out, color 0.3s ease;
+        }
+        .navbar a:hover {
+            transform: scale(1.1);
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .navbar.scrolled a {
+            color: white;
+        }
 </style>
 <script>
-/* Script già presenti */
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
 </script>
 </head>
 <body>
