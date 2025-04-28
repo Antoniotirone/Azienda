@@ -29,6 +29,9 @@
             height: 40px;
         }
         .navbar-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             gap: 20px;
         }
@@ -55,27 +58,13 @@
             height: 100vh;
             background: url('18.jpg') no-repeat center center/cover;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
         }
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 70px;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 20px 40px;
-            border-radius: 10px;
-            margin: 0;
-        }
-        .hero p {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            margin-top: 20px;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 10px 20px;
-            border-radius: 10px;
+        .hero img {
+            max-width: 80%;
+            height: auto;
         }
         .description {
             text-align: center;
@@ -193,8 +182,7 @@
 </nav>
 
 <section class="hero">
-    <h1>Azienda Agricola Tirone</h1>
-    <p>BIOLOGICO e sostenibile, per valorizzare natura e qualità.</p>
+    <img src="Titolo sfondo.png" alt="Titolo Azienda">
 </section>
 
 <section class="description">
