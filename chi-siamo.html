@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chi Siamo</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
-<style>
-/* CSS NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    background: transparent;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-.navbar img {
-    height: 40px;
-}
-.navbar-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-family: 'Libre Baskerville', serif;
-    transition: transform 0.2s ease-in-out, color 0.3s ease;
-}
-.navbar a:hover {
-    transform: scale(1.1);
-}
-.navbar.scrolled {
-    background: rgba(0, 0, 0, 0.6);
-}
-.navbar.scrolled a {
-    color: white;
-}
-</style>
-<script>
-/* SCRIPT SCROLL NAVBAR */
-window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi Siamo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <style>
+    /* Stili della navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      background: transparent;
+      transition: background 0.3s ease, color 0.3s ease;
     }
-});
-</script>
+    .navbar img {
+      height: 40px;
+    }
+    .navbar-links {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: 'Libre Baskerville', serif;
+      transition: transform 0.2s ease-in-out, color 0.3s ease;
+    }
+    .navbar a:hover {
+      transform: scale(1.1);
+    }
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .navbar.scrolled a {
+      color: white;
+    }
+    body {
+      margin: 0;
+      padding-top: 80px; /* Spazio per la navbar fissa */
+      background-color: #f5f5f5;
+      font-family: 'Libre Baskerville', serif;
+    }
+    .content {
+      padding: 20px;
+    }
+  </style>
 </head>
-
 <body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
+  <nav class="navbar">
+    <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone" />
     <div class="navbar-links">
-        <a href="index.html">Home</a>
-        <a href="prodotti.html">Prodotti</a>
-        <a href="chi-siamo.html">Chi Siamo</a>
-        <a href="contatti.html">Contatti</a>
+      <a href="index.html">Home</a>
+      <a href="prodotti.html">Prodotti</a>
+      <a href="chi-siamo.html">Chi Siamo</a>
+      <a href="contatti.html">Contatti</a>
     </div>
-</nav>
+  </nav>
 
-<!-- CONTENUTO DELLA PAGINA CHI SIAMO -->
-<section class="chi-siamo">
+  <div class="content">
     <h1>Chi Siamo</h1>
-    <p>Informazioni sulla storia dell'Azienda Agricola Tirone...</p>
-</section>
+    <p>Informazioni sull'Azienda Agricola Tirone.</p>
+    <!-- Altri contenuti della pagina -->
+  </div>
 
+  <script>
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
