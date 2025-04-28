@@ -1,255 +1,119 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prodotti - Azienda Agricola Tirone</title>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-
-    body {
-      font-family: 'Libre Baskerville', serif;
-      margin: 0;
-      padding: 0;
-      background: rgb(228, 225, 216);
-    }
-
-    /* NAVBAR aggiornata */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 1000;
-      background: transparent;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-    .navbar img {
-      height: 40px;
-    }
-    .navbar-links {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 20px;
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      text-transform: uppercase;
-      font-family: 'Libre Baskerville', serif;
-      transition: transform 0.2s ease-in-out, color 0.3s ease;
-    }
-    .navbar a:hover {
-      transform: scale(1.1);
-    }
-    .navbar.scrolled {
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .navbar.scrolled a {
-      color: white;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 50vh;
-      background: url('2.1sfondo.webp') no-repeat center center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 50px;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 50px;
-      background: white;
-    }
-
-    .product {
-      background: rgb(228, 225, 216);
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      margin: 20px;
-      padding: 20px;
-      max-width: 300px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-
-    .product img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .product:hover {
-      transform: scale(1.05);
-    }
-
-    .product h2 {
-      font-size: 24px;
-      margin: 10px 0;
-      color: black;
-    }
-
-    .product p {
-      color: black;
-    }
-
-    .footer {
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    .footer div {
-      flex: 1;
-      min-width: 250px;
-      padding: 10px;
-    }
-
-    .footer div:nth-child(2) {
-      border-left: 2px solid white;
-      border-right: 2px solid white;
-    }
-
-    .footer p {
-      margin: 5px 0;
-    }
-
-    .footer .social-icons img, .footer-logo img {
-      width: 20px;
-      vertical-align: middle;
-      margin-right: 5px;
-    }
-
-    .footer-logo img {
-      width: 210px;
-      display: block;
-      margin: 0 auto 10px;
-    }
-
-    .footer-bottom {
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-
-<body>
-
-<!-- Navbar aggiornata -->
-<nav class="navbar">
-  <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
-  <div class="navbar-links">
-    <a href="index.html">Home</a>
-    <a href="prodotti.html">Prodotti</a>
-    <a href="chi-siamo.html">Chi Siamo</a>
-    <a href="contatti.html">Contatti</a>
-  </div>
-</nav>
-
-<!-- Hero originale -->
-<section class="hero">
-  <h1>I Nostri Prodotti</h1>
-</section>
-
-<!-- Sezione prodotti originale -->
-<section class="products">
-  <div class="product">
-    <img src="olio.webp" alt="Olio Extra Vergine">
-    <h2>Olio Extra Vergine</h2>
-    <p>Olio biologico di altissima qualità prodotto dai nostri ulivi.</p>
-  </div>
-  <div class="product">
-    <img src="mandorle.webp" alt="Mandorle">
-    <h2>Mandorle</h2>
-    <p>Mandorle biologiche siciliane, dolci e nutrienti.</p>
-  </div>
-  <div class="product">
-    <img src="pistacchi.webp" alt="Pistacchi">
-    <h2>Pistacchi</h2>
-    <p>Pistacchi naturali, raccolti e selezionati a mano.</p>
-  </div>
-  <div class="product">
-    <img src="noci.webp" alt="Noci">
-    <h2>Noci</h2>
-    <p>Le nostre noci sono ricche di sapore e completamente naturali.</p>
-  </div>
-</section>
-
-<!-- Footer originale -->
-<footer class="footer">
-  <div>
-    <div class="footer-logo">
-      <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
-    </div>
-    <p><strong>Azienda Agricola Tirone</strong></p>
-    <p>Contrada Quattro Finaite</p>
-    <p>Grotte AG, 92020</p>
-  </div>
-  <div>
-    <p><strong>Contatti</strong></p>
-    <p>Email: antoniotirone@hotmail.it</p>
-    <p>Tel: +39 3501433500</p>
-  </div>
-  <div class="social-icons">
-    <p><strong>Seguici su</strong></p>
-    <p><a href="https://www.instagram.com/azienda_agricola_tirone" target="_blank"><img src="0.1logoinsta.png" alt="Instagram"> Instagram</a></p>
-    <p><a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"><img src="0.2logofb.png" alt="Facebook"> Facebook</a></p>
-    <p><a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</a></p>
-    <p><a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"><img src="0.4logotelegram.png" alt="Telegram"> Telegram</a></p>
-  </div>
-</footer>
-
-<div class="footer-bottom">
-  <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
-</div>
-
-<!-- Script navbar scroll -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prodotti - Azienda Agricola Tirone</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Stili CSS */
+(body and navbar styles già presenti)
+</style>
 <script>
-window.addEventListener('scroll', function() {
-  var navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+/* Script già presenti */
 </script>
-
+</head>
+<body>
+<nav class="navbar">
+<img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
+<div class="navbar-links">
+<a href="index.html">Home</a>
+<a href="prodotti.html">Prodotti</a>
+<a href="chi-siamo.html">Chi Siamo</a>
+<a href="contatti.html">Contatti</a>
+</div>
+</nav>
+<section class="hero">
+<h1>Prodotti</h1>
+</section>
+<section class="container">
+<div class="product-links">
+<a onclick="showProducts('all')">Tutti i prodotti</a>
+<a onclick="showProducts('mandorle')">Mandorle</a>
+<a onclick="showProducts('olio')">Olio</a>
+<a onclick="showProducts('vino')">Vino</a>
+</div>
+<div class="separator"></div>
+<div class="product mandorle" onclick="openProductPage()">
+<img src="2.2.1.webp" alt="Mandorle">
+<p>Mandorle con guscio biologiche Azienda Agricola Tirone 1-15kg</p>
+<strong>3-45€ (iva inc.)</strong>
+</div>
+<div class="product mandorle">
+<img src="2.2.2.webp" alt="Mandorle">
+<p>Mandorle sgusciate biologiche Azienda Agricola Tirone 0.25-3kg</p>
+<strong>4-48€ (iva inc.)</strong>
+</div>
+<div class="product mandorle">
+<img src="2.2.3.webp" alt="Mandorle">
+<p>Mandorle pelate biologiche Azienda Agricola Tirone 0.25-3kg</p>
+<strong>5-50€ (iva inc.)</strong>
+</div>
+<div class="product mandorle">
+<img src="2.2.4.webp" alt="Mandorle">
+<p>Mandorle pelate affettate biologiche Azienda Agricola Tirone 0.25-3kg</p>
+<strong>5-50€ (iva inc.)</strong>
+</div>
+<div class="product mandorle">
+<img src="2.2.5.webp" alt="Mandorle">
+<p>Bastoncini di mandorle affettate biologiche Azienda Agricola Tirone 1kg</p>
+<strong>10€ (iva inc.)</strong>
+</div>
+<div class="product mandorle">
+<img src="2.2.6.webp" alt="Mandorle">
+<p>Torrone con mandorle pelate biologiche Azienda Agricola Tirone 1kg</p>
+<strong>20€ (iva inc.)</strong>
+</div>
+<div class="product mandorle">
+<img src="2.2.7.webp" alt="Mandorle">
+<p>Granella di mandorle biologiche Azienda Agricola Tirone 1kg</p>
+<strong>12€ (iva inc.)</strong>
+</div>
+<div class="product mandorle">
+<img src="2.2.8.webp" alt="Mandorle">
+<p>Farina di mandorle biologiche Azienda Agricola Tirone 1kg</p>
+<strong>5€ (iva inc.)</strong>
+</div>
+<div class="product mandorle">
+<img src="2.2.9.webp" alt="Mandorle">
+<p>Latte di mandorle biologiche Azienda Agricola Tirone 1kg</p>
+<strong>5€ (iva inc.)</strong>
+</div>
+<div class="product olio">
+<img src="2.3.0olio.jpg.webp" alt="Olio d'oliva">
+<p>Olio olio extravergine di oliva BIO Azienda Agricola Tirone 1l</p>
+<strong>25€ (iva inc.)</strong>
+</div>
+<div class="product vino">
+<img src="2.4.0vino.jpg.webp" alt="Vino">
+<p>Vino rosso Azienda Agricola Tirone 1l</p>
+<strong>25€ (iva inc.)</strong>
+</div>
+</section>
+<footer class="footer">
+<div>
+<div class="footer-logo">
+<img src="Logotrasp1.png" alt="Azienda Agricola Tirone Logo">
+</div>
+<p><strong>Azienda Agricola Tirone</strong></p>
+<p>Contrada Quattro Finaite</p>
+<p>Grotte AG, 92020</p>
+</div>
+<div>
+<p><strong>Contatti</strong></p>
+<p>Email: antoniotirone@hotmail.it</p>
+<p>Tel: +39 3501433500</p>
+</div>
+<div class="social-icons">
+<p><strong>Seguici su</strong></p>
+<p><a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank"><img src="0.1logoinsta.png" alt="Instagram"> Instagram</a></p>
+<p><a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"><img src="0.2logofb.png" alt="Facebook"> Facebook</a></p>
+<p><a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</a></p>
+<p><a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"><img src="0.4logotelegram.png" alt="Telegram"> Telegram</a></p>
+</div>
+</footer>
+<div class="footer-bottom">
+<p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
+</div>
 </body>
 </html>
