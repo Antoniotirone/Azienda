@@ -59,24 +59,16 @@
             background: url('ile.jpg') no-repeat center center/cover;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             text-align: center;
             flex-direction: column;
-        }
-        .hero img {
-            max-width: 40%;
-            height: auto;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding-bottom: 60px;
         }
         .scroll-down {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
             text-align: center;
             color: white;
             font-family: 'Libre Baskerville', serif;
-            font-size: 18px;
+            font-size: 16px;
             cursor: pointer;
             line-height: 1;
         }
@@ -206,7 +198,6 @@
 </nav>
 
 <section class="hero">
-    <img src="Titolo sfondjo2.png" alt="Titolo Azienda">
     <div class="scroll-down" onclick="document.getElementById('welcome').scrollIntoView({ behavior: 'smooth' });">
         Scopri di più
         <div class="arrow">&#x2304;&#x2304;</div>
