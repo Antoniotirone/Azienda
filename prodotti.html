@@ -1,187 +1,242 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prodotti - Azienda Agricola Tirone</title>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Libre Baskerville', serif;
-            margin: 0;
-            padding: 0;
-            background: rgb(228, 225, 216);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prodotti - Azienda Agricola Tirone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
-        /* Navbar aggiornata */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: transparent;
-            z-index: 1000;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-        .navbar img {
-            height: 40px;
-        }
-        .navbar-links {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            text-transform: uppercase;
-            font-family: 'Libre Baskerville', serif;
-            transition: transform 0.2s ease-in-out, color 0.3s ease;
-        }
-        .navbar a:hover {
-            transform: scale(1.1);
-        }
-        .navbar.scrolled {
-            background: rgba(0, 0, 0, 0.6);
-        }
-        .navbar.scrolled a {
-            color: white;
-        }
+    body {
+      font-family: 'Libre Baskerville', serif;
+      margin: 0;
+      padding: 0;
+      background: rgb(228, 225, 216);
+    }
 
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 50vh;
-            background: url('2.1sfondo.webp') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-        .hero h1 {
-            font-size: 50px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-        }
+    /* NAVBAR aggiornata */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      background: transparent;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .navbar img {
+      height: 40px;
+    }
+    .navbar-links {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: 'Libre Baskerville', serif;
+      transition: transform 0.2s ease-in-out, color 0.3s ease;
+    }
+    .navbar a:hover {
+      transform: scale(1.1);
+    }
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .navbar.scrolled a {
+      color: white;
+    }
 
-        .description {
-            text-align: center;
-            padding: 50px;
-            background: white;
-        }
-        .description h2 {
-            color: black;
-            margin-bottom: 10px;
-        }
-        .description p {
-            max-width: 800px;
-            margin: auto;
-            color: black;
-        }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      background: url('2.1sfondo.webp') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
 
-        .footer {
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-around;
-        }
-        .footer div {
-            flex: 1;
-            padding: 10px;
-        }
-        .footer div:nth-child(2) {
-            border-left: 2px solid white;
-            border-right: 2px solid white;
-        }
-        .footer p {
-            margin: 5px 0;
-        }
-        .footer .social-icons img, .footer-logo img {
-            width: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-        .footer-logo img {
-            width: 210px;
-            display: block;
-            margin: 0 auto 10px;
-        }
-        .footer-bottom {
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .hero h1 {
+      font-size: 50px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px;
+      background: white;
+    }
+
+    .product {
+      background: rgb(228, 225, 216);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin: 20px;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product h2 {
+      font-size: 24px;
+      margin: 10px 0;
+      color: black;
+    }
+
+    .product p {
+      color: black;
+    }
+
+    .footer {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .footer div {
+      flex: 1;
+      min-width: 250px;
+      padding: 10px;
+    }
+
+    .footer div:nth-child(2) {
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .footer .social-icons img, .footer-logo img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .footer-logo img {
+      width: 210px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .footer-bottom {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- Navbar aggiornata -->
 <nav class="navbar">
-    <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
-    <div class="navbar-links">
-        <a href="index.html">Home</a>
-        <a href="prodotti.html">Prodotti</a>
-        <a href="chi-siamo.html">Chi Siamo</a>
-        <a href="contatti.html">Contatti</a>
-    </div>
+  <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
+  <div class="navbar-links">
+    <a href="index.html">Home</a>
+    <a href="prodotti.html">Prodotti</a>
+    <a href="chi-siamo.html">Chi Siamo</a>
+    <a href="contatti.html">Contatti</a>
+  </div>
 </nav>
 
 <!-- Hero originale -->
 <section class="hero">
-    <h1>I nostri prodotti</h1>
+  <h1>I Nostri Prodotti</h1>
 </section>
 
-<!-- Descrizione originale -->
-<section class="description">
-    <h2>Produzione BIO certificata</h2>
-    <p>La nostra azienda agricola produce olio extravergine di oliva, mandorle, pistacchi e noci nel rispetto delle tradizioni e dei metodi biologici. Tutti i nostri prodotti sono coltivati senza l'uso di pesticidi o fertilizzanti chimici, garantendo un sapore autentico e genuino.</p>
+<!-- Sezione prodotti originale -->
+<section class="products">
+  <div class="product">
+    <img src="olio.webp" alt="Olio Extra Vergine">
+    <h2>Olio Extra Vergine</h2>
+    <p>Olio biologico di altissima qualità prodotto dai nostri ulivi.</p>
+  </div>
+  <div class="product">
+    <img src="mandorle.webp" alt="Mandorle">
+    <h2>Mandorle</h2>
+    <p>Mandorle biologiche siciliane, dolci e nutrienti.</p>
+  </div>
+  <div class="product">
+    <img src="pistacchi.webp" alt="Pistacchi">
+    <h2>Pistacchi</h2>
+    <p>Pistacchi naturali, raccolti e selezionati a mano.</p>
+  </div>
+  <div class="product">
+    <img src="noci.webp" alt="Noci">
+    <h2>Noci</h2>
+    <p>Le nostre noci sono ricche di sapore e completamente naturali.</p>
+  </div>
 </section>
 
 <!-- Footer originale -->
 <footer class="footer">
-    <div>
-        <div class="footer-logo">
-            <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
-        </div>
-        <p><strong>Azienda Agricola Tirone</strong></p>
-        <p>Contrada Quattro Finaite</p>
-        <p>Grotte AG, 92020</p>
+  <div>
+    <div class="footer-logo">
+      <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
     </div>
-    <div>
-        <p><strong>Contatti</strong></p>
-        <p>Email: antoniotirone@hotmail.it</p>
-        <p>Tel: +39 3501433500</p>
-    </div>
-    <div class="social-icons">
-        <p><strong>Seguici su</strong></p>
-        <p><a href="https://www.instagram.com/azienda_agricola_tirone" target="_blank"><img src="0.1logoinsta.png" alt="Instagram"> Instagram</a></p>
-        <p><a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"><img src="0.2logofb.png" alt="Facebook"> Facebook</a></p>
-        <p><a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</a></p>
-        <p><a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"><img src="0.4logotelegram.png" alt="Telegram"> Telegram</a></p>
-    </div>
+    <p><strong>Azienda Agricola Tirone</strong></p>
+    <p>Contrada Quattro Finaite</p>
+    <p>Grotte AG, 92020</p>
+  </div>
+  <div>
+    <p><strong>Contatti</strong></p>
+    <p>Email: antoniotirone@hotmail.it</p>
+    <p>Tel: +39 3501433500</p>
+  </div>
+  <div class="social-icons">
+    <p><strong>Seguici su</strong></p>
+    <p><a href="https://www.instagram.com/azienda_agricola_tirone" target="_blank"><img src="0.1logoinsta.png" alt="Instagram"> Instagram</a></p>
+    <p><a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"><img src="0.2logofb.png" alt="Facebook"> Facebook</a></p>
+    <p><a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</a></p>
+    <p><a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"><img src="0.4logotelegram.png" alt="Telegram"> Telegram</a></p>
+  </div>
 </footer>
 
 <div class="footer-bottom">
-    <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
+  <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
 </div>
 
 <!-- Script navbar scroll -->
