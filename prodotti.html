@@ -101,7 +101,7 @@
     margin-bottom: 30px;
     text-align: left;
     display: block;
-    width: 880px;
+    width: 940px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -109,11 +109,12 @@
       display: none;
     }
   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 220px);
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-    justify-content: start;
+    width: 940px;
     margin: 0 auto 40px auto;
+    justify-content: flex-start;
   }
     .product {
       background: white;
