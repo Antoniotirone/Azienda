@@ -116,14 +116,15 @@
   max-width: 980px;
   margin: 0 auto 40px auto;
   justify-content: space-between;
+  padding: 0 20px; /* margini laterali esterni aggiunti */
 }
 .product {
   background: white;
   padding: 15px;
-  width: calc((100% - 90px) / 4 + 5px); /* leggermente più largo */
+  width: calc((100% - 90px) / 4); /* 3 spazi da 30px tra 4 colonne */
   text-align: left;
   cursor: pointer;
-  flex: 0 1 calc((100% - 90px) / 4 + 5px);
+  flex: 0 1 calc((100% - 90px) / 4);
   box-sizing: border-box;
 }
     .product img {
