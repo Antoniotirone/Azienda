@@ -18,7 +18,13 @@
         .hero h1 { font-size: 50px; background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 10px; font-family: 'Cormorant Garamond', serif; }
         .container { max-width: 1200px; margin: auto; padding: 40px; text-align: center; background: rgb(228, 225, 216); }
         .separator { border-top: 4px solid #8B0000; margin: 20px 0; }
-        .product { display: inline-block; background: white; margin: 15px; padding: 15px; width: 220px; height: 380px; text-align: left; cursor: pointer; }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .product { background: white; padding: 15px; width: 220px; text-align: left; cursor: pointer; flex: 0 1 220px; }
         .product img { width: 100%; height: 272px; object-fit: cover; }
         .product p { font-size: 16px; margin: 0; font-family: 'Lato', sans-serif; }
         .product strong { display: block; font-size: 16px; font-weight: bold; margin-top: 2px; font-family: 'Lato', sans-serif; }
@@ -95,17 +101,19 @@
     </div>
     <div class="separator"></div>
 
-    <div class="product mandorle" onclick="openProductPage()"><img src="2.2.1.png" alt="Mandorle"><p>Mandorle con guscio biologiche Azienda Agricola Tirone </p>1-15kg</p><strong>3-45€ (iva inc.)</strong></div>
-    <div class="product mandorle"><img src="2.2.2.png" alt="Mandorle"><p>Mandorle sgusciate biologiche Azienda Agricola Tirone </p>0.25-3kg</p><strong>4-48€ (iva inc.)</strong></div>
-    <div class="product mandorle"><img src="2.2.3.png" alt="Mandorle"><p>Mandorle pelate biologiche Azienda Agricola Tirone </p>0.25-3kg</p><strong>5-50€ (iva inc.)</strong></div>
-    <div class="product mandorle"><img src="2.2.4.png" alt="Mandorle"><p>Mandorle pelate affettate biologiche Azienda Agricola Tirone </p>0.25-3kg</p><strong>5-50€ (iva inc.)</strong></div>
-    <div class="product mandorle"><img src="2.2.5.png" alt="Mandorle"><p>Bastoncini di mandorle affettate biologiche Azienda Agricola Tirone </p>1kg</p><strong>10€ (iva inc.)</strong></div>
-    <div class="product mandorle"><img src="2.2.6.png" alt="Mandorle"><p>Torrone con mandorle pelate biologiche Azienda Agricola Tirone </p>1kg</p><strong>20€ (iva inc.)</strong></div>
-    <div class="product mandorle"><img src="2.2.7.png" alt="Mandorle"><p>Granella di mandorle biologiche Azienda Agricola Tirone </p>1kg</p><strong>12€ (iva inc.)</strong></div>
-    <div class="product mandorle"><img src="2.2.8.png" alt="Mandorle"><p>Farina di mandorle biologiche Azienda Agricola Tirone </p>1kg</p><strong>5€ (iva inc.)</strong></div>
-    <div class="product mandorle"><img src="2.2.9.png" alt="Mandorle"><p>Latte di mandorle biologiche Azienda Agricola Tirone </p>1kg</p><strong>5€ (iva inc.)</strong></div>
-    <div class="product olio"><img src="2.3.0.png" alt="Olio"><p>Olio extravergine di oliva BIO Azienda Agricola Tirone </p>1l</p><strong>25€ (iva inc.)</strong></div>
-    <div class="product vino"><img src="2.4.0.png" alt="Vino"><p>Vino rosso Azienda Agricola Tirone </p>1l</p><strong>25€ (iva inc.)</strong></div>
+    <div class="product-grid">
+        <div class="product mandorle" onclick="openProductPage()"><img src="2.2.1.png" alt="Mandorle"><p>Mandorle con guscio biologiche Azienda Agricola Tirone </p>1-15kg</p><strong>3-45€ (iva inc.)</strong></div>
+        <div class="product mandorle"><img src="2.2.2.png" alt="Mandorle"><p>Mandorle sgusciate biologiche Azienda Agricola Tirone </p>0.25-3kg</p><strong>4-48€ (iva inc.)</strong></div>
+        <div class="product mandorle"><img src="2.2.3.png" alt="Mandorle"><p>Mandorle pelate biologiche Azienda Agricola Tirone </p>0.25-3kg</p><strong>5-50€ (iva inc.)</strong></div>
+        <div class="product mandorle"><img src="2.2.4.png" alt="Mandorle"><p>Mandorle pelate affettate biologiche Azienda Agricola Tirone </p>0.25-3kg</p><strong>5-50€ (iva inc.)</strong></div>
+        <div class="product mandorle"><img src="2.2.5.png" alt="Mandorle"><p>Bastoncini di mandorle affettate biologiche Azienda Agricola Tirone </p>1kg</p><strong>10€ (iva inc.)</strong></div>
+        <div class="product mandorle"><img src="2.2.6.png" alt="Mandorle"><p>Torrone con mandorle pelate biologiche Azienda Agricola Tirone </p>1kg</p><strong>20€ (iva inc.)</strong></div>
+        <div class="product mandorle"><img src="2.2.7.png" alt="Mandorle"><p>Granella di mandorle biologiche Azienda Agricola Tirone </p>1kg</p><strong>12€ (iva inc.)</strong></div>
+        <div class="product mandorle"><img src="2.2.8.png" alt="Mandorle"><p>Farina di mandorle biologiche Azienda Agricola Tirone </p>1kg</p><strong>5€ (iva inc.)</strong></div>
+        <div class="product mandorle"><img src="2.2.9.png" alt="Mandorle"><p>Latte di mandorle biologiche Azienda Agricola Tirone </p>1kg</p><strong>5€ (iva inc.)</strong></div>
+        <div class="product olio"><img src="2.3.0.png" alt="Olio"><p>Olio extravergine di oliva BIO Azienda Agricola Tirone </p>1l</p><strong>25€ (iva inc.)</strong></div>
+        <div class="product vino"><img src="2.4.0.png" alt="Vino"><p>Vino rosso Azienda Agricola Tirone </p>1l</p><strong>25€ (iva inc.)</strong></div>
+    </div>
 </section>
 
 <footer class="footer">
