@@ -17,7 +17,16 @@
         .hero { position: relative; width: 100%; height: 50vh; background: url('2.1sfondo.webp') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; text-align: center; color: white; }
         .hero h1 { font-size: 50px; background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 10px; font-family: 'Cormorant Garamond', serif; }
         .container { max-width: 1200px; margin: auto; padding: 40px; text-align: center; background: rgb(228, 225, 216); }
-        .separator { border-top: 4px solid #8B0000; margin: 20px 0; }
+        .separator { border-top: 4px solid #8B0000; margin: 20px 0; width: 100%; max-width: 960px; margin-left: auto; margin-right: auto; }
+        .product-description {
+            max-width: 960px;
+            margin: 0 auto 30px auto;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.6;
+            color: #333;
+        }
         .product-grid {
             display: flex;
             flex-wrap: wrap;
@@ -100,6 +109,10 @@
         <a onclick="showProducts('vino')">Vino</a>
     </div>
     <div class="separator"></div>
+
+    <div class="product-description">
+        La nostra azienda agricola offre una selezione di prodotti biologici certificati, coltivati e trasformati nel rispetto dell’ambiente e delle tradizioni locali. Ogni prodotto nasce da un’agricoltura sostenibile, senza l’uso di pesticidi chimici o OGM, per garantire genuinità e qualità.
+    </div>
 
     <div class="product-grid">
         <div class="product mandorle" onclick="openProductPage()"><img src="2.2.1.png" alt="Mandorle"><p>Mandorle con guscio biologiche Azienda Agricola Tirone </p>1-15kg</p><strong>3-45€ (iva inc.)</strong></div>
