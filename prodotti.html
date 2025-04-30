@@ -94,7 +94,7 @@
       line-height: 1.6;
       color: #333;
     }
-    .mandorle-title, .olio-title {
+    .mandorle-title, .olio-title, .vino-title {
       color: #8B0000;
       font-size: 26px;
       font-family: 'Cormorant Garamond', serif;
@@ -103,7 +103,7 @@
       text-align: center;
       display: block;
     }
-    .mandorle-title.hidden, .olio-title.hidden {
+    .mandorle-title.hidden, .olio-title.hidden, .vino-title.hidden {
       display: none;
     }
     .product-grid {
@@ -206,6 +206,7 @@
       let allProducts = document.querySelectorAll('.product');
       let mandorleTitle = document.getElementById('mandorleTitle');
       let olioTitle = document.getElementById('olioTitle');
+      let vinoTitle = document.getElementById('vinoTitle');
       allProducts.forEach(product => product.style.display = 'none');
       document.querySelectorAll('.product-links a').forEach(link => link.classList.remove('active'));
       if (category === 'all') {
@@ -213,13 +214,16 @@
         document.querySelector('.product-links a[onclick*="all"]').classList.add('active');
         mandorleTitle.classList.remove('hidden');
         olioTitle.classList.remove('hidden');
+        vinoTitle.classList.remove('hidden');
       } else {
         document.querySelectorAll('.' + category).forEach(product => product.style.display = 'inline-block');
         document.querySelector(`.product-links a[onclick*='${category}']`).classList.add('active');
         mandorleTitle.classList.add('hidden');
         olioTitle.classList.add('hidden');
+        vinoTitle.classList.add('hidden');
         if (category === 'mandorle') mandorleTitle.classList.remove('hidden');
         if (category === 'olio') olioTitle.classList.remove('hidden');
+        if (category === 'vino') vinoTitle.classList.remove('hidden');
       }
     }
 
@@ -290,6 +294,7 @@
       <div class="product olio"><img src="2.3.0.png" alt="Olio"><p>Olio extravergine di oliva BIO Azienda Agricola Tirone </p>1l</p><strong>25€ (iva inc.)</strong></div>
     </div>
 
+    <h2 class="vino-title" id="vinoTitle">La nostra selezione di vino biologico</h2>
     <div class="product-grid">
       <div class="product vino"><img src="2.4.0.png" alt="Vino"><p>Vino rosso Azienda Agricola Tirone </p>1l</p><strong>25€ (iva inc.)</strong></div>
     </div>
