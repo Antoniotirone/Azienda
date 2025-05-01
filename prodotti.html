@@ -208,50 +208,53 @@
       text-decoration: underline;
     }
   </style>
-  <script>
-    function showProducts(category) {
-      let allProducts = document.querySelectorAll('.product');
-      let mandorleTitle = document.getElementById('mandorleTitle');
-      let olioTitle = document.getElementById('olioTitle');
-      let vinoTitle = document.getElementById('vinoTitle');
-      allProducts.forEach(product => product.style.display = 'none');
-      document.querySelectorAll('.product-links a').forEach(link => link.classList.remove('active'));
-      if (category === 'all') {
-        allProducts.forEach(product => product.style.display = 'inline-block');
-        document.querySelector('.product-links a[onclick*="all"]').classList.add('active');
-        mandorleTitle.classList.remove('hidden');
-        olioTitle.classList.remove('hidden');
-        vinoTitle.classList.remove('hidden');
-      } else {
-        document.querySelectorAll('.' + category).forEach(product => product.style.display = 'inline-block');
-        document.querySelector(`.product-links a[onclick*='${category}']`).classList.add('active');
-        mandorleTitle.classList.add('hidden');
-        olioTitle.classList.add('hidden');
-        vinoTitle.classList.add('hidden');
-        if (category === 'mandorle') mandorleTitle.classList.remove('hidden');
-        if (category === 'olio') olioTitle.classList.remove('hidden');
-        if (category === 'vino') vinoTitle.classList.remove('hidden');
-      }
+  
+function showProducts(category) {
+  let allProducts = document.querySelectorAll('.product');
+  let mandorleTitle = document.getElementById('mandorleTitle');
+  let olioTitle = document.getElementById('olioTitle');
+  let vinoTitle = document.getElementById('vinoTitle');
+  let mandorleDesc = document.getElementById('mandorleDesc');
+  let olioDesc = document.getElementById('olioDesc');
+  let vinoDesc = document.getElementById('vinoDesc');
+
+  allProducts.forEach(product => product.style.display = 'none');
+  document.querySelectorAll('.product-links a').forEach(link => link.classList.remove('active'));
+
+  mandorleTitle.classList.add('hidden');
+  olioTitle.classList.add('hidden');
+  vinoTitle.classList.add('hidden');
+  mandorleDesc.style.display = 'none';
+  olioDesc.style.display = 'none';
+  vinoDesc.style.display = 'none';
+
+  if (category === 'all') {
+    allProducts.forEach(product => product.style.display = 'inline-block');
+    document.querySelector('.product-links a[onclick*="all"]').classList.add('active');
+    mandorleTitle.classList.remove('hidden');
+    olioTitle.classList.remove('hidden');
+    vinoTitle.classList.remove('hidden');
+    mandorleDesc.style.display = 'block';
+    olioDesc.style.display = 'block';
+    vinoDesc.style.display = 'block';
+  } else {
+    document.querySelectorAll('.' + category).forEach(product => product.style.display = 'inline-block');
+    document.querySelector(`.product-links a[onclick*='${category}']`).classList.add('active');
+    if (category === 'mandorle') {
+      mandorleTitle.classList.remove('hidden');
+      mandorleDesc.style.display = 'block';
     }
-
-    function openProductPage() {
-      window.location.href = 'prodotto1.html';
+    if (category === 'olio') {
+      olioTitle.classList.remove('hidden');
+      olioDesc.style.display = 'block';
     }
+    if (category === 'vino') {
+      vinoTitle.classList.remove('hidden');
+      vinoDesc.style.display = 'block';
+    }
+  }
+}
 
-    document.addEventListener("DOMContentLoaded", function () {
-      let allProductsLink = document.querySelector('.product-links a[onclick*="all"]');
-      allProductsLink.classList.add('active');
-    });
-
-    window.addEventListener('scroll', function () {
-      var navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  </script>
 </head>
 <body>
   <nav class="navbar">
