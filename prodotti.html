@@ -212,53 +212,51 @@
 <script>
   function showProducts(category) {
     let allProducts = document.querySelectorAll('.product');
-    let mandorleTitle = document.getElementById('mandorleTitle');
-    let olioTitle = document.getElementById('olioTitle');
-    let vinoTitle = document.getElementById('vinoTitle');
-    let mandorleDesc = document.getElementById('mandorleDesc');
-    let olioDesc = document.getElementById('olioDesc');
-    let vinoDesc = document.getElementById('vinoDesc');
-
-    // Nascondi tutti i prodotti, link attivi, titoli e descrizioni
-    allProducts.forEach(product => product.style.display = 'none');
     document.querySelectorAll('.product-links a').forEach(link => link.classList.remove('active'));
 
-    mandorleTitle.classList.add('hidden');
-    olioTitle.classList.add('hidden');
-    vinoTitle.classList.add('hidden');
-    mandorleDesc.style.display = 'none';
-    olioDesc.style.display = 'none';
-    vinoDesc.style.display = 'none';
+    // Rimuovi i titoli e le descrizioni se esistono
+    ['mandorle', 'olio', 'vino'].forEach(type => {
+      let title = document.getElementById(type + 'Title');
+      let desc = document.getElementById(type + 'Desc');
+      if (title) title.remove();
+      if (desc) desc.style.display = 'none';
+    });
+
+    allProducts.forEach(product => product.style.display = 'none');
 
     if (category === 'all') {
       allProducts.forEach(product => product.style.display = 'inline-block');
       document.querySelector('.product-links a[onclick*="all"]').classList.add('active');
-      mandorleTitle.classList.remove('hidden');
-      olioTitle.classList.remove('hidden');
-      vinoTitle.classList.remove('hidden');
-      mandorleDesc.style.display = 'block';
-      olioDesc.style.display = 'block';
-      vinoDesc.style.display = 'block';
+      addTitleAndDesc('mandorle');
+      addTitleAndDesc('olio');
+      addTitleAndDesc('vino');
     } else {
       document.querySelectorAll('.' + category).forEach(product => product.style.display = 'inline-block');
       document.querySelector(`.product-links a[onclick*='${category}']`).classList.add('active');
-      if (category === 'mandorle') {
-        mandorleTitle.classList.remove('hidden');
-        mandorleDesc.style.display = 'block';
-      }
-      if (category === 'olio') {
-        olioTitle.classList.remove('hidden');
-        olioDesc.style.display = 'block';
-      }
-      if (category === 'vino') {
-       vinoTitle.classList.remove('hidden');
-       vinoDesc.style.display = 'block';
-      }
+      addTitleAndDesc(category);
     }
   }
 
-  function openProductPage() {
-    window.location.href = 'prodotto1.html';
+  function addTitleAndDesc(type) {
+    const titles = {
+      mandorle: 'La nostra selezione di mandorle biologiche',
+      olio: 'La nostra selezione di olio extravergine di oliva biologico',
+      vino: 'La nostra selezione di vino biologico'
+    };
+
+    const refElement = document.getElementById(type + 'Desc');
+    if (!refElement) return;
+
+    if (!document.getElementById(type + 'Title')) {
+      const title = document.createElement('h2');
+      title.className = `${type}-title`;
+      title.id = `${type}Title`;
+      title.style.marginBottom = '10px';
+      title.innerText = titles[type];
+      refElement.parentNode.insertBefore(title, refElement);
+    }
+
+    refElement.style.display = 'block';
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -275,7 +273,6 @@
     }
   });
 </script>
-
   
 </head>
 <body>
