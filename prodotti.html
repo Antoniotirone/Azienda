@@ -323,7 +323,35 @@
       <div class="product mandorle"><img src="2.2.9.png" alt="Mandorle"><p>Latte di mandorle biologiche Azienda Agricola Tirone </p>1kg</p><strong>5€ (iva inc.)</strong></div>
     </div>
 
-    <h2 class="olio-title" id="olioTitle">La nostra selezione di olio extravergine di oliva biologico</h2>
+<div class="product-description" id="olioDesc" style="text-align: left; margin: 0 auto 30px auto; max-width: 980px; padding: 0;">
+  <span id="shortOlio">
+    L’olio extravergine di oliva biologico siciliano è un prodotto di altissima qualità, frutto della millenaria tradizione olivicola dell’isola e di una coltivazione rispettosa dell’ambiente...
+  </span>
+  <span id="moreOlio" style="display: none;">
+    Ottenuto da olive coltivate senza pesticidi né sostanze chimiche, viene estratto a freddo entro poche ore dalla raccolta, per preservarne intatti aroma, gusto e proprietà nutrizionali.<br><br>
+    Le cultivar autoctone siciliane, come la Nocellara del Belice, la Biancolilla e la Tonda Iblea, conferiscono all’olio note fruttate, leggere sfumature erbacee e un equilibrio perfetto tra dolcezza, amaro e piccante.<br><br>
+    Ricco di antiossidanti naturali (come i polifenoli), vitamina E e grassi monoinsaturi, questo olio contribuisce alla salute cardiovascolare, al controllo del colesterolo e alla protezione dallo stress ossidativo.<br><br>
+    Apprezzato sia crudo che in cottura, è l’ingrediente base della dieta mediterranea e un emblema della cultura gastronomica siciliana: un condimento nobile, sano e autentico, che racconta una storia di territorio, tradizione e passione.
+  </span>
+  <br>
+  <a href="javascript:void(0);" onclick="toggleMoreOlio()" id="toggleOlio" style="color: black; text-decoration: underline;">Leggi di più</a>
+</div>
+
+<script>
+  function toggleMoreOlio() {
+    const moreText = document.getElementById("moreOlio");
+    const btnText = document.getElementById("toggleOlio");
+
+    if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      btnText.innerText = "Leggi meno";
+    } else {
+      moreText.style.display = "none";
+      btnText.innerText = "Leggi di più";
+    }
+  }
+</script>
+
     <div class="product-grid">
       <div class="product olio"><img src="2.3.0.png" alt="Olio"><p>Olio extravergine di oliva BIO Azienda Agricola Tirone </p>1l</p><strong>25€ (iva inc.)</strong></div>
     </div>
