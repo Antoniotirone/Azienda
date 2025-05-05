@@ -4,17 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contatti - Azienda Agricola Tirone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Libre+Baskerville&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-
     body {
-      font-family: 'Libre Baskerville', serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background: rgb(228, 225, 216);
     }
 
-    /* Navbar aggiornata */
     .navbar {
       position: fixed;
       top: 0;
@@ -54,12 +52,11 @@
     .navbar.scrolled a {
       color: white;
     }
-
     .hero {
       position: relative;
       width: 100%;
       height: 50vh;
-      background: url('4.1sfondo.jpg') no-repeat center center/cover;
+      background: url('3.1sfondo.jpg') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -71,34 +68,16 @@
       background: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 10px;
+      font-family: 'Cormorant Garamond', serif;
     }
 
-    .description {
-      text-align: center;
-      padding: 50px;
-      background: white;
-    }
-    .description h2 {
-      color: black;
-      margin-bottom: 10px;
-    }
-    .description p {
-      max-width: 800px;
-      margin: auto;
-      color: black;
-    }
-
-    .footer {
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: space-around;
+    .separator {
+      border-top: 4px solid #8B0000;
     }
     .footer div {
       flex: 1;
       padding: 10px;
+      min-width: 250px;
     }
     .footer div:nth-child(2) {
       border-left: 2px solid white;
@@ -107,7 +86,8 @@
     .footer p {
       margin: 5px 0;
     }
-    .footer .social-icons img, .footer-logo img {
+    .footer .social-icons img,
+    .footer-logo img {
       width: 20px;
       vertical-align: middle;
       margin-right: 5px;
@@ -116,15 +96,12 @@
       width: 210px;
       display: block;
       margin: 0 auto 10px;
-      position: relative;
-      left: 5px;
     }
     .footer-bottom {
       background: rgba(0, 0, 0, 0.6);
       color: white;
       text-align: center;
       padding: 10px;
-      border-top: none;
     }
     .footer a {
       color: white;
@@ -138,7 +115,7 @@
 
 <body>
 
-<!-- Navbar aggiornata -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
   <div class="navbar-links">
@@ -149,21 +126,23 @@
   </div>
 </nav>
 
-<!-- Hero originale -->
 <section class="hero">
   <h1>Contatti</h1>
 </section>
 
-<!-- Descrizione originale -->
 <section class="description">
   <h2>Come contattarci</h2>
-  <p>Se desideri maggiori informazioni sui nostri prodotti o sulle nostre pratiche agricole, non esitare a contattarci.</p>
-  <p>Email: antoniotirone@hotmail.it</p>
-  <p>Telefono: +39 3501433500</p>
-  <p>Indirizzo: Contrada Quattro Finaite, Grotte (AG), 92020</p>
+  <div class="separator"></div>
+  <p>Se desideri maggiori informazioni sui nostri prodotti o sulle nostre pratiche agricole, non esitare a contattarci. 
+    Email: antoniotirone@hotmail.it 
+    Telefono: +39 3501433500
+    Indirizzo: Contrada Quattro Finaite, Grotte (AG), 92020</p>
+
+  <div style="max-width: 960px; margin: 40px auto 0 auto;">
+    <img src="3.2.jpg" alt="Azienda Agricola Tirone" style="width: 100%; display: block; border-radius: 8px;">
+  </div>
 </section>
 
-<!-- Footer originale -->
 <footer class="footer">
   <div>
     <div class="footer-logo">
@@ -173,17 +152,38 @@
     <p>Contrada Quattro Finaite</p>
     <p>Grotte AG, 92020</p>
   </div>
-  <div>
-    <p><strong>Contatti</strong></p>
-    <p>Email: antoniotirone@hotmail.it</p>
-    <p>Tel: +39 3501433500</p>
+
+  <div class="footer-contacts" style="border-left: 2px solid white; border-right: 2px solid white;">
+    <p><strong>Email:</strong></p>
+    <p>aztirone@libero.it</p>
+    <p style="margin-top: 20px;"><strong>Contatti telefonici:</strong></p>
+    <p>+39 3397445966</p>
+    <p>+39 3887982684</p>
+    <p>+39 3501433500</p>
   </div>
-  <div class="social-icons">
+
+  <div class="social-icons" style="text-align: center;">
     <p><strong>Seguici su</strong></p>
-    <p><a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank"><img src="0.1logoinsta.png" alt="Instagram"> Instagram</a></p>
-    <p><a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"><img src="0.2logofb.png" alt="Facebook"> Facebook</a></p>
-    <p><a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"><img src="0.3logoyoutube.png" alt="YouTube"> YouTube</a></p>
-    <p><a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"><img src="0.4logotelegram.png" alt="Telegram"> Telegram</a></p>
+    <a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank"
+       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
+      <img src="0.1logoinsta.png" alt="Instagram" style="width: 25px;">
+      Instagram
+    </a><br>
+    <a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"
+       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
+      <img src="0.2logofb.png" alt="Facebook" style="width: 25px;">
+      Facebook
+    </a><br>
+    <a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"
+       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
+      <img src="0.3logoyoutube.png" alt="YouTube" style="width: 25px;">
+      YouTube
+    </a><br>
+    <a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"
+       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
+      <img src="0.4logotelegram.png" alt="Telegram" style="width: 25px;">
+      Telegram
+    </a>
   </div>
 </footer>
 
@@ -191,7 +191,7 @@
   <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
 </div>
 
-<!-- Script per navbar scroll -->
+<!-- Script navbar scroll -->
 <script>
 window.addEventListener('scroll', function() {
   var navbar = document.querySelector('.navbar');
@@ -202,6 +202,9 @@ window.addEventListener('scroll', function() {
   }
 });
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
