@@ -156,9 +156,55 @@
     .back-button:hover {
       background-color: #a52a2a;
     }
+    .footer {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .footer div {
+      flex: 1;
+      padding: 10px;
+      min-width: 250px;
+    }
+    .footer div:nth-child(2) {
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+    }
+    .footer p {
+      margin: 5px 0;
+    }
+    .footer .social-icons img,
+    .footer-logo img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .footer-logo img {
+      width: 210px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    .footer-bottom {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
     <div class="navbar-links">
@@ -202,7 +248,7 @@
       <p>Contrada Quattro Finaite</p>
       <p>Grotte AG, 92020</p>
     </div>
-    <div class="footer-contacts">
+    <div class="footer-contacts" style="border-left: 2px solid white; border-right: 2px solid white;">
       <p><strong>Email:</strong></p>
       <p>aztirone@libero.it</p>
       <p style="margin-top: 20px;"><strong>Contatti telefonici:</strong></p>
@@ -210,7 +256,7 @@
       <p>+39 3887982684</p>
       <p>+39 3501433500</p>
     </div>
-    <div class="social-icons">
+    <div class="social-icons" style="text-align: center;">
       <p><strong>Seguici su</strong></p>
       <a href="https://www.instagram.com/azienda_agricola_tirone" target="_blank">
         <img src="0.1logoinsta.png" alt="Instagram"> Instagram
