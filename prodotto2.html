@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Le nostre mandorle biologiche siciliane - Azienda Agricola Tirone</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Libre+Baskerville&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet" />
   <style>
@@ -52,6 +52,7 @@
     .navbar.scrolled a {
       color: white;
     }
+
     .hero {
       position: relative;
       width: 100%;
@@ -70,12 +71,14 @@
       border-radius: 10px;
       font-family: 'Cormorant Garamond', serif;
     }
+
     .separator {
       border-top: 4px solid #8B0000;
       border-radius: 5px;
       margin: 20px 0;
       width: 60%;
     }
+
     .description {
       display: flex;
       flex-wrap: wrap;
@@ -86,21 +89,41 @@
       gap: 40px;
       background: rgb(228, 225, 216);
     }
+
     .description .left {
       flex: 1 1 45%;
     }
     .slider {
       position: relative;
       max-width: 100%;
+      height: 400px;
+      overflow: hidden;
     }
     .slider img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: none;
       border-radius: 8px;
     }
     .slider img.active {
       display: block;
     }
+    .slider-nav {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .slider-nav.left {
+      left: 0;
+    }
+    .slider-nav.right {
+      right: 0;
+    }
+
     .thumbnails {
       display: flex;
       justify-content: center;
@@ -116,6 +139,7 @@
     .thumbnails img.active-thumb {
       border-color: #8B0000;
     }
+
     .description .right {
       flex: 1 1 50%;
     }
@@ -131,6 +155,7 @@
       font-size: 20px;
       line-height: 1.6;
     }
+
     .price-box {
       background: #fff;
       border: 2px solid #8B0000;
@@ -141,7 +166,10 @@
       font-size: 20px;
       color: #000;
       line-height: 1.8;
+      width: fit-content;
+      max-width: 100%;
     }
+
     .back-button {
       display: inline-block;
       margin-top: 20px;
@@ -156,6 +184,7 @@
     .back-button:hover {
       background-color: #a52a2a;
     }
+
     .footer {
       background: rgba(0, 0, 0, 0.6);
       color: white;
@@ -176,12 +205,6 @@
     }
     .footer p {
       margin: 5px 0;
-    }
-    .footer .social-icons img,
-    .footer-logo img {
-      width: 20px;
-      vertical-align: middle;
-      margin-right: 5px;
     }
     .footer-logo img {
       width: 210px;
@@ -204,7 +227,7 @@
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
+
   <nav class="navbar">
     <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
     <div class="navbar-links">
@@ -214,14 +237,18 @@
       <a href="contatti.html">Contatti</a>
     </div>
   </nav>
+
   <section class="hero">
     <h1>Le nostre mandorle biologiche siciliane</h1>
   </section>
+
   <section class="description">
     <div class="left">
       <div class="slider">
-        <img src="3.2.jpg" class="active" id="slide1" alt="Mandorle con guscio">
-        <img src="2.2.2.png" id="slide2" alt="Mandorle alternate">
+        <div class="slider-nav left" onclick="changeSlide(-1)"></div>
+        <img src="3.2.jpg" class="active" alt="Mandorle con guscio">
+        <img src="2.2.2.png" alt="Mandorle alternate">
+        <div class="slider-nav right" onclick="changeSlide(1)"></div>
       </div>
       <div class="thumbnails">
         <img src="3.2.jpg" class="active-thumb" onclick="showSlide(0)">
@@ -239,6 +266,7 @@
       <a href="prodotti.html" class="back-button">Torna ai prodotti</a>
     </div>
   </section>
+
   <footer class="footer">
     <div>
       <div class="footer-logo">
@@ -272,27 +300,39 @@
       </a>
     </div>
   </footer>
+
   <div class="footer-bottom">
     <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
   </div>
+
   <script>
+    const slides = document.querySelectorAll('.slider img');
+    const thumbs = document.querySelectorAll('.thumbnails img');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+        thumbs[i].classList.toggle('active-thumb', i === index);
+      });
+      currentSlide = index;
+    }
+
+    function changeSlide(direction) {
+      let newIndex = currentSlide + direction;
+      if (newIndex < 0) newIndex = slides.length - 1;
+      if (newIndex >= slides.length) newIndex = 0;
+      showSlide(newIndex);
+    }
+
     window.addEventListener('scroll', function () {
-      var navbar = document.querySelector('.navbar');
+      const navbar = document.querySelector('.navbar');
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
     });
-
-    const slides = document.querySelectorAll('.slider img');
-    const thumbs = document.querySelectorAll('.thumbnails img');
-    function showSlide(index) {
-      slides.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
-        thumbs[i].classList.toggle('active-thumb', i === index);
-      });
-    }
   </script>
 </body>
 </html>
