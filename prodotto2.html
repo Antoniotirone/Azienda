@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chi Siamo - Azienda Agricola Tirone</title>
+  <title>Le nostre mandorle biologiche siciliane - Azienda Agricola Tirone</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Libre+Baskerville&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -70,172 +70,183 @@
       border-radius: 10px;
       font-family: 'Cormorant Garamond', serif;
     }
-
     .separator {
       border-top: 4px solid #8B0000;
       border-radius: 5px;
-      margin: 20px auto 30px auto;
-      width: 100%;
-      max-width: 960px;
+      margin: 20px 0;
+      width: 60%;
     }
-
     .description {
-      text-align: center;
-      padding: 40px 20px 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px;
+      align-items: flex-start;
+      gap: 40px;
       background: rgb(228, 225, 216);
+    }
+    .description .left {
+      flex: 1 1 45%;
+    }
+    .slider {
+      position: relative;
+      max-width: 100%;
+    }
+    .slider img {
+      width: 100%;
+      display: none;
+      border-radius: 8px;
+    }
+    .slider img.active {
+      display: block;
+    }
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 10px;
+    }
+    .thumbnails img {
+      width: 60px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+    }
+    .thumbnails img.active-thumb {
+      border-color: #8B0000;
+    }
+    .description .right {
+      flex: 1 1 50%;
     }
     .description h2 {
       color: black;
-      margin-bottom: 5px;
-      margin-top: -20px;
       font-family: 'Cormorant Garamond', serif;
       font-size: 36px;
+      margin-top: 0;
     }
     .description p {
-      max-width: 800px;
-      margin: auto;
       color: black;
       font-family: 'Cormorant Garamond', serif;
-      line-height: 1.6;
       font-size: 20px;
+      line-height: 1.6;
     }
-
-    .footer {
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+    .price-box {
+      background: #fff;
+      border: 2px solid #8B0000;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: #000;
+      line-height: 1.8;
     }
-    .footer div {
-      flex: 1;
-      padding: 10px;
-      min-width: 250px;
-    }
-    .footer div:nth-child(2) {
-      border-left: 2px solid white;
-      border-right: 2px solid white;
-    }
-    .footer p {
-      margin: 5px 0;
-    }
-    .footer .social-icons img,
-    .footer-logo img {
-      width: 20px;
-      vertical-align: middle;
-      margin-right: 5px;
-    }
-    .footer-logo img {
-      width: 210px;
-      display: block;
-      margin: 0 auto 10px;
-    }
-    .footer-bottom {
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-    .footer a {
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #8B0000;
       color: white;
       text-decoration: none;
+      font-family: 'Libre Baskerville', serif;
+      border-radius: 5px;
+      transition: background 0.3s ease;
     }
-    .footer a:hover {
-      text-decoration: underline;
+    .back-button:hover {
+      background-color: #a52a2a;
     }
   </style>
 </head>
-
 <body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-  <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
-  <div class="navbar-links">
-    <a href="index.html">Home</a>
-    <a href="prodotti.html">Prodotti</a>
-    <a href="chi-siamo.html">Chi Siamo</a>
-    <a href="contatti.html">Contatti</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <h1>Chi Siamo</h1>
-</section>
-
-<section class="description">
-  <h2>La nostra storia</h2>
-  <div class="separator"></div>
-  <p>L'azienda agricola Tirone nasce dalla passione per la terra e dalla volontà di offrire prodotti genuini e di alta qualità.
-     Fondata con l'obiettivo di promuovere la coltivazione biologica, oggi l'azienda è un punto di riferimento per la produzione di olio e mandorle.</p>
-  <p>Ci troviamo a Grotte (AG), a circa 20 km dalla Valle dei Templi, immersi in un territorio ricco di storia e tradizione agricola.</p>
-
-  <div style="max-width: 960px; margin: 40px auto 0 auto;">
-    <img src="3.2.jpg" alt="Azienda Agricola Tirone" style="width: 100%; display: block; border-radius: 8px;">
-  </div>
-</section>
-
-<footer class="footer">
-  <div>
-    <div class="footer-logo">
-      <img src="Logotrasp1.png" alt="Azienda Agricola Tirone Logo">
+  <nav class="navbar">
+    <img src="Logotrasp1.png" alt="Logo Azienda Agricola Tirone">
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="prodotti.html">Prodotti</a>
+      <a href="chi-siamo.html">Chi Siamo</a>
+      <a href="contatti.html">Contatti</a>
     </div>
-    <p><strong>Azienda Agricola Tirone</strong></p>
-    <p>Contrada Quattro Finaite</p>
-    <p>Grotte AG, 92020</p>
+  </nav>
+  <section class="hero">
+    <h1>Le nostre mandorle biologiche siciliane</h1>
+  </section>
+  <section class="description">
+    <div class="left">
+      <div class="slider">
+        <img src="3.2.jpg" class="active" id="slide1" alt="Mandorle con guscio">
+        <img src="2.2.2.png" id="slide2" alt="Mandorle alternate">
+      </div>
+      <div class="thumbnails">
+        <img src="3.2.jpg" class="active-thumb" onclick="showSlide(0)">
+        <img src="2.2.2.png" onclick="showSlide(1)">
+      </div>
+    </div>
+    <div class="right">
+      <h2>Mandorle con Guscio Biologiche</h2>
+      <div class="separator"></div>
+      <p>Le nostre mandorle con guscio biologiche sono coltivate con cura e attenzione. Perfette per uno snack salutare o per l'uso in cucina.</p>
+      <div class="price-box">
+        Prezzo:<br>
+        Confezione da 1kg &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50 euro IVA inc
+      </div>
+      <a href="prodotti.html" class="back-button">Torna ai prodotti</a>
+    </div>
+  </section>
+  <footer class="footer">
+    <div>
+      <div class="footer-logo">
+        <img src="Logotrasp1.png" alt="Azienda Agricola Tirone Logo">
+      </div>
+      <p><strong>Azienda Agricola Tirone</strong></p>
+      <p>Contrada Quattro Finaite</p>
+      <p>Grotte AG, 92020</p>
+    </div>
+    <div class="footer-contacts">
+      <p><strong>Email:</strong></p>
+      <p>aztirone@libero.it</p>
+      <p style="margin-top: 20px;"><strong>Contatti telefonici:</strong></p>
+      <p>+39 3397445966</p>
+      <p>+39 3887982684</p>
+      <p>+39 3501433500</p>
+    </div>
+    <div class="social-icons">
+      <p><strong>Seguici su</strong></p>
+      <a href="https://www.instagram.com/azienda_agricola_tirone" target="_blank">
+        <img src="0.1logoinsta.png" alt="Instagram"> Instagram
+      </a><br>
+      <a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank">
+        <img src="0.2logofb.png" alt="Facebook"> Facebook
+      </a><br>
+      <a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank">
+        <img src="0.3logoyoutube.png" alt="YouTube"> YouTube
+      </a><br>
+      <a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank">
+        <img src="0.4logotelegram.png" alt="Telegram"> Telegram
+      </a>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
   </div>
+  <script>
+    window.addEventListener('scroll', function () {
+      var navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
-  <div class="footer-contacts" style="border-left: 2px solid white; border-right: 2px solid white;">
-    <p><strong>Email:</strong></p>
-    <p>aztirone@libero.it</p>
-    <p style="margin-top: 20px;"><strong>Contatti telefonici:</strong></p>
-    <p>+39 3397445966</p>
-    <p>+39 3887982684</p>
-    <p>+39 3501433500</p>
-  </div>
-
-  <div class="social-icons" style="text-align: center;">
-    <p><strong>Seguici su</strong></p>
-    <a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank"
-       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
-      <img src="0.1logoinsta.png" alt="Instagram" style="width: 25px;">
-      Instagram
-    </a><br>
-    <a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"
-       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
-      <img src="0.2logofb.png" alt="Facebook" style="width: 25px;">
-      Facebook
-    </a><br>
-    <a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"
-       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
-      <img src="0.3logoyoutube.png" alt="YouTube" style="width: 25px;">
-      YouTube
-    </a><br>
-    <a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"
-       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
-      <img src="0.4logotelegram.png" alt="Telegram" style="width: 25px;">
-      Telegram
-    </a>
-  </div>
-</footer>
-
-<div class="footer-bottom">
-  <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
-</div>
-
-<!-- Script navbar scroll -->
-<script>
-window.addEventListener('scroll', function() {
-  var navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-</script>
-
+    const slides = document.querySelectorAll('.slider img');
+    const thumbs = document.querySelectorAll('.thumbnails img');
+    function showSlide(index) {
+      slides.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+        thumbs[i].classList.toggle('active-thumb', i === index);
+      });
+    }
+  </script>
 </body>
 </html>
