@@ -79,22 +79,22 @@
     .description {
       display: flex;
       flex-wrap: wrap;
-      max-width: 960px;
+      max-width: 1200px;
       margin: 60px auto;
-      padding: 20px;
+      padding: 40px;
       align-items: flex-start;
       gap: 40px;
       background: rgb(228, 225, 216);
     }
     .description .left {
-      flex: 1 1 40%;
+      flex: 1 1 45%;
     }
     .description .left img {
       width: 100%;
       border-radius: 8px;
     }
     .description .right {
-      flex: 1 1 55%;
+      flex: 1 1 50%;
     }
     .description h2 {
       color: black;
@@ -126,6 +126,51 @@
     }
     .back-button:hover {
       background-color: #a52a2a;
+    }
+    .footer {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .footer div {
+      flex: 1;
+      padding: 10px;
+      min-width: 250px;
+    }
+    .footer div:nth-child(2) {
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+    }
+    .footer p {
+      margin: 5px 0;
+    }
+    .footer .social-icons img,
+    .footer-logo img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .footer-logo img {
+      width: 210px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    .footer-bottom {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -164,7 +209,7 @@
       <p>Contrada Quattro Finaite</p>
       <p>Grotte AG, 92020</p>
     </div>
-    <div class="footer-contacts" style="border-left: 2px solid white; border-right: 2px solid white;">
+    <div class="footer-contacts">
       <p><strong>Email:</strong></p>
       <p>aztirone@libero.it</p>
       <p style="margin-top: 20px;"><strong>Contatti telefonici:</strong></p>
@@ -172,23 +217,19 @@
       <p>+39 3887982684</p>
       <p>+39 3501433500</p>
     </div>
-    <div class="social-icons" style="text-align: center;">
+    <div class="social-icons">
       <p><strong>Seguici su</strong></p>
-      <a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
-        <img src="0.1logoinsta.png" alt="Instagram" style="width: 25px;">
-        Instagram
+      <a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank">
+        <img src="0.1logoinsta.png" alt="Instagram"> Instagram
       </a><br>
-      <a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
-        <img src="0.2logofb.png" alt="Facebook" style="width: 25px;">
-        Facebook
+      <a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank">
+        <img src="0.2logofb.png" alt="Facebook"> Facebook
       </a><br>
-      <a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
-        <img src="0.3logoyoutube.png" alt="YouTube" style="width: 25px;">
-        YouTube
+      <a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank">
+        <img src="0.3logoyoutube.png" alt="YouTube"> YouTube
       </a><br>
-      <a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
-        <img src="0.4logotelegram.png" alt="Telegram" style="width: 25px;">
-        Telegram
+      <a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank">
+        <img src="0.4logotelegram.png" alt="Telegram"> Telegram
       </a>
     </div>
   </footer>
