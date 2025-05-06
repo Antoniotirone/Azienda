@@ -25,9 +25,11 @@
       background: transparent;
       transition: background 0.3s ease, color 0.3s ease;
     }
+
     .navbar img {
       height: 40px;
     }
+
     .navbar-links {
       position: absolute;
       left: 50%;
@@ -35,6 +37,7 @@
       display: flex;
       gap: 20px;
     }
+
     .navbar a {
       color: white;
       text-decoration: none;
@@ -43,12 +46,15 @@
       font-family: 'Libre Baskerville', serif;
       transition: transform 0.2s ease-in-out, color 0.3s ease;
     }
+
     .navbar a:hover {
       transform: scale(1.1);
     }
+
     .navbar.scrolled {
       background: rgba(0, 0, 0, 0.6);
     }
+
     .navbar.scrolled a {
       color: white;
     }
@@ -64,6 +70,7 @@
       text-align: center;
       color: white;
     }
+
     .hero h1 {
       font-size: 50px;
       background: rgba(0, 0, 0, 0.6);
@@ -225,10 +232,14 @@
     .modal .close-btn {
       position: absolute;
       top: 20px;
-      left: 20px;
-      font-size: 30px;
+      right: 20px;
+      font-size: 20px;
       color: white;
       cursor: pointer;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-family: 'Libre Baskerville', serif;
       z-index: 10000;
     }
 
@@ -241,36 +252,39 @@
       justify-content: space-around;
       flex-wrap: wrap;
     }
-
     .footer div {
       flex: 1;
       padding: 10px;
       min-width: 250px;
     }
-
     .footer div:nth-child(2) {
       border-left: 2px solid white;
       border-right: 2px solid white;
     }
-
+    .footer p {
+      margin: 5px 0;
+    }
+    .footer .social-icons img,
+    .footer-logo img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
     .footer-logo img {
       width: 210px;
       display: block;
       margin: 0 auto 10px;
     }
-
     .footer-bottom {
       background: rgba(0, 0, 0, 0.6);
       color: white;
       text-align: center;
       padding: 10px;
     }
-
     .footer a {
       color: white;
       text-decoration: none;
     }
-
     .footer a:hover {
       text-decoration: underline;
     }
@@ -317,39 +331,49 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div>
-      <div class="footer-logo">
-        <img src="Logotrasp1.png" alt="Azienda Agricola Tirone Logo">
-      </div>
-      <p><strong>Azienda Agricola Tirone</strong></p>
-      <p>Contrada Quattro Finaite</p>
-      <p>Grotte AG, 92020</p>
+<footer class="footer">
+  <div>
+    <div class="footer-logo">
+      <img src="Logotrasp1.png" alt="Azienda Agricola Tirone Logo">
     </div>
-    <div class="footer-contacts" style="border-left: 2px solid white; border-right: 2px solid white;">
-      <p><strong>Email:</strong></p>
-      <p>aztirone@libero.it</p>
-      <p style="margin-top: 20px;"><strong>Contatti telefonici:</strong></p>
-      <p>+39 3397445966</p>
-      <p>+39 3887982684</p>
-      <p>+39 3501433500</p>
-    </div>
-    <div class="social-icons" style="text-align: center;">
-      <p><strong>Seguici su</strong></p>
-      <a href="https://www.instagram.com/azienda_agricola_tirone" target="_blank">
-        <img src="0.1logoinsta.png" alt="Instagram"> Instagram
-      </a><br>
-      <a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank">
-        <img src="0.2logofb.png" alt="Facebook"> Facebook
-      </a><br>
-      <a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank">
-        <img src="0.3logoyoutube.png" alt="YouTube"> YouTube
-      </a><br>
-      <a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank">
-        <img src="0.4logotelegram.png" alt="Telegram"> Telegram
-      </a>
-    </div>
-  </footer>
+    <p><strong>Azienda Agricola Tirone</strong></p>
+    <p>Contrada Quattro Finaite</p>
+    <p>Grotte AG, 92020</p>
+  </div>
+
+  <div class="footer-contacts" style="border-left: 2px solid white; border-right: 2px solid white;">
+    <p><strong>Email:</strong></p>
+    <p>aztirone@libero.it</p>
+    <p style="margin-top: 20px;"><strong>Contatti telefonici:</strong></p>
+    <p>+39 3397445966</p>
+    <p>+39 3887982684</p>
+    <p>+39 3501433500</p>
+  </div>
+
+  <div class="social-icons" style="text-align: center;">
+    <p><strong>Seguici su</strong></p>
+    <a href="https://www.instagram.com/azienda_agricola_tirone?igsh=MTlrbmRwc2hjMmxkZw==" target="_blank"
+       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
+      <img src="0.1logoinsta.png" alt="Instagram" style="width: 25px;">
+      Instagram
+    </a><br>
+    <a href="https://www.facebook.com/share/15B5jykN5G/" target="_blank"
+       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
+      <img src="0.2logofb.png" alt="Facebook" style="width: 25px;">
+      Facebook
+    </a><br>
+    <a href="https://www.facebook.com/share/1A7srZYgUo/" target="_blank"
+       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
+      <img src="0.3logoyoutube.png" alt="YouTube" style="width: 25px;">
+      YouTube
+    </a><br>
+    <a href="https://www.facebook.com/share/14rcnwYgGA/" target="_blank"
+       style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 6px; text-decoration: none; color: white;">
+      <img src="0.4logotelegram.png" alt="Telegram" style="width: 25px;">
+      Telegram
+    </a>
+  </div>
+</footer>
 
   <div class="footer-bottom">
     <p>&copy; 2024 Azienda Agricola Tirone | Tutti i diritti riservati</p>
@@ -359,6 +383,7 @@
     const slides = document.querySelectorAll('.slider img');
     const thumbs = document.querySelectorAll('.thumbnails img');
     let currentSlide = 0;
+    let modalIndex = 0;
 
     function showSlide(index) {
       slides.forEach((img, i) => {
@@ -369,9 +394,7 @@
     }
 
     function changeSlide(direction) {
-      let newIndex = currentSlide + direction;
-      if (newIndex < 0) newIndex = slides.length - 1;
-      if (newIndex >= slides.length) newIndex = 0;
+      let newIndex = (currentSlide + direction + slides.length) % slides.length;
       showSlide(newIndex);
     }
 
@@ -386,26 +409,49 @@
 
         const closeBtn = document.createElement('div');
         closeBtn.classList.add('close-btn');
-        closeBtn.innerHTML = '&times;';
-        closeBtn.onclick = () => document.body.removeChild(modal);
+        closeBtn.innerHTML = 'Chiudi &times;';
+        closeBtn.onclick = () => {
+          document.body.removeChild(modal);
+          document.removeEventListener('keydown', modalKeyHandler);
+        };
 
         const zoomImg = document.createElement('img');
-        zoomImg.src = slides[currentSlide].src;
+        modalIndex = currentSlide;
+        zoomImg.src = slides[modalIndex].src;
 
         modal.appendChild(closeBtn);
         modal.appendChild(zoomImg);
         modal.style.display = 'flex';
         document.body.appendChild(modal);
+
+        modal.addEventListener('click', (e) => {
+          const width = modal.clientWidth;
+          const clickX = e.clientX;
+          if (clickX < width * 0.2) modalNavigate(-1);
+          else if (clickX > width * 0.8) modalNavigate(1);
+        });
+
+        document.addEventListener('keydown', modalKeyHandler);
+
+        function modalNavigate(dir) {
+          modalIndex = (modalIndex + dir + slides.length) % slides.length;
+          zoomImg.src = slides[modalIndex].src;
+        }
+
+        function modalKeyHandler(e) {
+          if (e.key === 'ArrowLeft') modalNavigate(-1);
+          if (e.key === 'ArrowRight') modalNavigate(1);
+          if (e.key === 'Escape') {
+            document.body.removeChild(modal);
+            document.removeEventListener('keydown', modalKeyHandler);
+          }
+        }
       });
     });
 
     window.addEventListener('scroll', function () {
       const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
   </script>
 </body>
